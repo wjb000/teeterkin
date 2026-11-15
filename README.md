@@ -1,2 +1,24 @@
-# teeterkin
-Teeterkin: a self-balancing two-wheeled pet robot with a pop-up periscope head. Parametric CadQuery CAD, STEP/STL, BOM and a 3D viewer.
+# Teeterkin
+
+A two-wheeled, self-balancing home pet robot with a pop-up periscope head.
+**Live 3D viewer:** https://wjb000.github.io/teeterkin/
+
+- Balances on two 72 mm wheels, so it never stands still: it sways, leans in, rocks back, and settles onto its kickstand tail to sleep and charge.
+- One micro servo drives a scotch yoke that lifts the whole head 38 mm, so it can peek over furniture, duck and bounce.
+- A smoked visor with animated eyes on a 2" IPS screen, a camera and mic (XIAO ESP32-S3 Sense), front range sensor, cliff sensors, touch ears and a speaker.
+- 8 molding tools, 10 molded pieces plus a dock. Every part also prints in PETG/TPU for prototypes.
+- BOM: see [BOM.md](BOM.md). Production notes: [cad/DFM.md](cad/DFM.md).
+
+## Repo
+| Path | What |
+|---|---|
+| `cad/teeterkin.py` | Parametric CadQuery model of every molded part (change a number, re-run) |
+| `cad/components.py` | Bought parts placed in the assembly (XIAO from Seeed's CAD via `fetch_vendor.py`, others from datasheets) |
+| `cad/export.py` | Builds STEP, print-ready ASCII STL, interference + mass reports, the viewer glTF and BOM.md |
+| `cad/step/`, `cad/stl/` | Per-part STEP and ASCII STL (STL already in print orientation) |
+| `cad/reports/` | Interference check (static + full head travel), mass and balance numbers |
+| `site/` | The GitHub Pages viewer (three.js) |
+
+Build: `pip install cadquery trimesh manifold3d fast_simplification && python cad/fetch_vendor.py && python cad/export.py`
+
+Status: a design model for review. Nothing has been built, printed or tested yet.
