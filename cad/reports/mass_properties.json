@@ -1,0 +1,137 @@
+{
+ "summary": {
+  "height_mm": 220,
+  "height_up_mm": 258,
+  "width_mm": 132,
+  "depth_mm": 73,
+  "total_mass_g": 484,
+  "com_above_axle_mm": 46.9,
+  "com_x_mm": -1.6,
+  "molded_tools": 8,
+  "molded_pieces": 10,
+  "wheel_d_mm": 72.0,
+  "lift_mm": 38.0,
+  "pendulum_tau_ms": 69
+ },
+ "parts": {
+  "shell_front": 42.5,
+  "shell_rear": 47.8,
+  "core": 79.0,
+  "head": 49.4,
+  "visor": 19.6,
+  "hub_l": 22.8,
+  "hub_r": 22.8,
+  "tyre_l": 19.5,
+  "tyre_r": 19.5,
+  "dock": 0
+ },
+ "bought": {
+  "motor_l": 10.5,
+  "motor_r": 10.5,
+  "cell_1": 46.0,
+  "cell_2": 46.0,
+  "pcb": 9.0,
+  "drv8833": 0.3,
+  "imu": 0.3,
+  "charger": 0.3,
+  "buck": 0.3,
+  "amp": 0.3,
+  "usbc": 1.0,
+  "switch": 0.5,
+  "pogo_l": 0.6,
+  "tof": 0.5,
+  "cliff_l": 0.3,
+  "cliff_r": 0.3,
+  "servo": 9.0,
+  "horn": 0.8,
+  "speaker": 5.0,
+  "xiao": 5.0,
+  "camera": 1.0,
+  "mic": 0.1,
+  "lcd": 12.0,
+  "touch": 0.4,
+  "flex": 1.0
+ },
+ "print": {
+  "shell_front": {
+   "qty": 1,
+   "material": "ABS (proto: PETG)",
+   "bbox_mm": [
+    146.0,
+    93.3,
+    36.5
+   ],
+   "facets": 3150
+  },
+  "shell_rear": {
+   "qty": 1,
+   "material": "ABS (proto: PETG)",
+   "bbox_mm": [
+    150.5,
+    93.3,
+    51.5
+   ],
+   "facets": 4253
+  },
+  "core": {
+   "qty": 1,
+   "material": "PC/ABS 20% GF (proto: PETG)",
+   "bbox_mm": [
+    46.9,
+    82.0,
+    126.0
+   ],
+   "facets": 2022
+  },
+  "head": {
+   "qty": 1,
+   "material": "ABS (proto: PETG)",
+   "bbox_mm": [
+    136.0,
+    104.0,
+    42.9
+   ],
+   "facets": 4541
+  },
+  "visor": {
+   "qty": 1,
+   "material": "smoked PC (proto: clear PETG, sanded)",
+   "bbox_mm": [
+    55.9,
+    103.9,
+    16.0
+   ],
+   "facets": 1348
+  },
+  "hub": {
+   "qty": 2,
+   "material": "PA6 GF (proto: PETG)",
+   "bbox_mm": [
+    60.0,
+    59.8,
+    18.0
+   ],
+   "facets": 928
+  },
+  "tyre": {
+   "qty": 2,
+   "material": "TPU 85A",
+   "bbox_mm": [
+    72.0,
+    72.0,
+    14.0
+   ],
+   "facets": 5000
+  },
+  "dock": {
+   "qty": 1,
+   "material": "ABS (proto: PETG)",
+   "bbox_mm": [
+    140.0,
+    110.0,
+    16.0
+   ],
+   "facets": 2815
+  }
+ }
+}
