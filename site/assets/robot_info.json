@@ -1,0 +1,983 @@
+{
+ "summary": {
+  "height_mm": 220,
+  "height_up_mm": 258,
+  "width_mm": 132,
+  "depth_mm": 73,
+  "total_mass_g": 487,
+  "com_above_axle_mm": 46.6,
+  "com_x_mm": -1.6,
+  "molded_tools": 8,
+  "molded_pieces": 10,
+  "wheel_d_mm": 72.0,
+  "lift_mm": 38.0,
+  "pendulum_tau_ms": 69
+ },
+ "bom": {
+  "proto_total": 139.24,
+  "volume_total": 45.05,
+  "checked": "2026-11-14",
+  "proto": [
+   {
+    "item": "Seeed XIAO ESP32-S3 Sense (brain, camera, mic)",
+    "qty": 1,
+    "unit": 13.9,
+    "link": "https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/113991115/18724504"
+   },
+   {
+    "item": "N20 6 V metal gearmotor with hall encoder",
+    "qty": 2,
+    "unit": 14.95,
+    "link": "https://abra-electronics.com/electromechanical/motors/gear-motors/mini-metal-gearmotors/ga12-n20-6v300-zh-jga12-n20-moteur-cc-a-engrenages-metalliques-a-detecteur-hall-6v-300-tr-min-avec-connecteur-jst-zh-a-6-broches.html"
+   },
+   {
+    "item": "Waveshare 2.0\" IPS LCD 240x320 ST7789",
+    "qty": 1,
+    "unit": 11.99,
+    "link": "https://www.waveshare.com/product/2inch-lcd-module.htm"
+   },
+   {
+    "item": "SG90 micro servo",
+    "qty": 1,
+    "unit": 1.75,
+    "link": "https://www.amazon.com/dp/B0DFL7QZRJ"
+   },
+   {
+    "item": "Adafruit MAX98357A I2S amp",
+    "qty": 1,
+    "unit": 5.95,
+    "link": "https://www.adafruit.com/product/3006"
+   },
+   {
+    "item": "Pololu DRV8833 dual motor driver carrier",
+    "qty": 1,
+    "unit": 10.95,
+    "link": "https://www.pololu.com/product/2130"
+   },
+   {
+    "item": "MPU-6050 (GY-521) IMU board",
+    "qty": 1,
+    "unit": 4.33,
+    "link": "https://www.amazon.com/EPLZON-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B09TW19SS5"
+   },
+   {
+    "item": "VL53L0X ToF board (front + both cliff sensors on the proto)",
+    "qty": 3,
+    "unit": 3.0,
+    "link": "https://www.amazon.com/SHUATI-VL53L0X-Distance-Breakout-Ranging/dp/B0CQ28Q3KC"
+   },
+   {
+    "item": "18650 cell 2600 mAh (Sony/Murata VTC5)",
+    "qty": 2,
+    "unit": 5.99,
+    "link": "https://www.18650batterystore.com/collections/lithium-ion-batteries"
+   },
+   {
+    "item": "2S USB-C charge + protection board",
+    "qty": 1,
+    "unit": 7.99,
+    "link": "https://www.amazon.com/Adeept-18650-Charge-Charging-Board/dp/B0BJTW4QBR"
+   },
+   {
+    "item": "5 V 2 A buck regulator (Pololu D24V22F5 class)",
+    "qty": 1,
+    "unit": 9.95,
+    "link": "https://www.pololu.com/category/131/step-down-voltage-regulators"
+   },
+   {
+    "item": "Speaker 28 mm 8 ohm",
+    "qty": 1,
+    "unit": 1.95,
+    "link": "https://www.adafruit.com/product/1890"
+   },
+   {
+    "item": "Perfboard, JST leads, 10-wire ribbon, slide switch",
+    "qty": 1,
+    "unit": 6.0,
+    "link": ""
+   },
+   {
+    "item": "Charge contacts (2 brass pads) + dock USB-C breakout + 2 pogo springs",
+    "qty": 1,
+    "unit": 4.0,
+    "link": ""
+   },
+   {
+    "item": "M2 screws, heat-set inserts",
+    "qty": 1,
+    "unit": 2.0,
+    "link": ""
+   },
+   {
+    "item": "PETG filament (~320 g incl. dock) + TPU (~40 g)",
+    "qty": 1,
+    "unit": 7.6,
+    "link": ""
+   }
+  ],
+  "volume": [
+   {
+    "item": "ESP32-S3 module (N8R8) on the head board",
+    "unit": 3.2
+   },
+   {
+    "item": "OV3660 / OV2640 camera, 66 deg FPC",
+    "unit": 2.4
+   },
+   {
+    "item": "PDM MEMS microphone",
+    "unit": 0.35
+   },
+   {
+    "item": "2.0\" IPS 240x320 bare panel (FPC)",
+    "unit": 2.6
+   },
+   {
+    "item": "2x N20 100:1 + hall encoder",
+    "unit": 4.8
+   },
+   {
+    "item": "Micro servo (SG90 class, custom lead length)",
+    "unit": 0.9
+   },
+   {
+    "item": "2x 18650 2600 mAh (grade-A, tabbed pack)",
+    "unit": 3.2
+   },
+   {
+    "item": "Main board: 2-layer 44x70, DRV8833, ICM-42670-P, IP2326, buck, MAX98357A, USB-C, switch",
+    "unit": 6.9
+   },
+   {
+    "item": "Head board: ESP32-S3 + display/camera FFC connectors",
+    "unit": 2.4
+   },
+   {
+    "item": "VL53L0X ToF + 2 IR cliff sensors",
+    "unit": 1.4
+   },
+   {
+    "item": "Speaker 28 mm",
+    "unit": 0.45
+   },
+   {
+    "item": "Injection-molded parts (shells, core, head, visor, 2 hubs) ",
+    "unit": 4.6
+   },
+   {
+    "item": "2x TPU tyres",
+    "unit": 0.5
+   },
+   {
+    "item": "Wiring: 10-wire ribbon, motor leads, contacts, fasteners",
+    "unit": 1.3
+   },
+   {
+    "item": "Dock: molded puck, 2 spring contacts, USB-C board",
+    "unit": 2.3
+   },
+   {
+    "item": "Packaging + USB-C cable + quick-start card",
+    "unit": 2.6
+   },
+   {
+    "item": "Assembly + end-of-line test (12 min at $9/h)",
+    "unit": 1.8
+   },
+   {
+    "item": "Contingency: yield loss, scrap, price drift (8%)",
+    "unit": 3.35
+   }
+  ],
+  "tooling": "One-time: about $38k-55k for 8 steel/aluminium tools (shell front/rear, core, head, visor, hub, tyre, dock), FCC/CE/UN38.3 testing about $20k-30k."
+ },
+ "joints": {
+  "wheel_l": {
+   "node": "link:wheel_l",
+   "origin": [
+    0.0,
+    59.0,
+    36.0
+   ],
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits": null
+  },
+  "wheel_r": {
+   "node": "link:wheel_r",
+   "origin": [
+    0.0,
+    -59.0,
+    36.0
+   ],
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits": null
+  },
+  "head_lift": {
+   "node": "link:head",
+   "origin": [
+    0.0,
+    0.0,
+    158.0
+   ],
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "limits": [
+    0.0,
+    38.0
+   ]
+  },
+  "servo_horn": {
+   "node": "link:horn",
+   "origin": [
+    2.5,
+    0.0,
+    108.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "limits": [
+    0.0,
+    180.0
+   ]
+  }
+ },
+ "params": {
+  "axle_z": 36.0,
+  "wheel_r": 36.0,
+  "horn_r": 19.0,
+  "lift": 38.0,
+  "disp": {
+   "x": 18.0,
+   "z": 191.0,
+   "w": 58.0,
+   "h": 35.0
+  },
+  "head_z0": 158.0
+ },
+ "items": {
+  "part:shell_front": {
+   "title": "Body shell, front",
+   "desc": "Front half of the bean-shaped body: chest speaker grille, brow window for the range sensor, two cliff-sensor eyes. Splits from the rear half on one flat plane, so it is a simple straight-pull tool.",
+   "group": "shell",
+   "color": "#f2ede4",
+   "explode": [
+    75,
+    0,
+    0
+   ],
+   "kind": "molded",
+   "material": "ABS (proto: PETG)",
+   "mass_g": 42.5
+  },
+  "part:shell_rear": {
+   "title": "Body shell, rear + kickstand tail",
+   "desc": "Rear half with the upturned tail moulded in. To park, Teeterkin leans back onto the tail: motors off, zero power, and the charge pads in the tail land on the dock.",
+   "group": "shell",
+   "color": "#f2ede4",
+   "explode": [
+    -75,
+    0,
+    0
+   ],
+   "kind": "molded",
+   "material": "ABS (proto: PETG)",
+   "mass_g": 47.8
+  },
+  "part:core": {
+   "title": "Core frame",
+   "desc": "The one structural part: motor saddles, battery cradle, spine for the main board, servo cradle and the mast sleeve. Every bought part mounts to it before the shells close.",
+   "group": "structure",
+   "color": "#2a2e35",
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "kind": "molded",
+   "material": "PC/ABS 20% GF (proto: PETG)",
+   "mass_g": 79.0
+  },
+  "part:head": {
+   "title": "Head + periscope mast",
+   "desc": "Head shell, hollow mast and scotch-yoke bar in a single moulding. The servo crank runs in the yoke slot and lifts the whole head 38 mm.",
+   "group": "shell",
+   "color": "#f2ede4",
+   "explode": [
+    0,
+    0,
+    95
+   ],
+   "kind": "molded",
+   "material": "ABS (proto: PETG)",
+   "mass_g": 49.4
+  },
+  "part:visor": {
+   "title": "Smoked visor (face)",
+   "desc": "Clear smoked polycarbonate. The display reads through it as glowing eyes; switched off it is a glossy black face.",
+   "group": "shell",
+   "color": "#1b2430",
+   "explode": [
+    55,
+    0,
+    95
+   ],
+   "kind": "molded",
+   "material": "smoked PC (proto: clear PETG, sanded)",
+   "mass_g": 19.6
+  },
+  "part:hub_l": {
+   "title": "Wheel hub",
+   "desc": "Five-spoke hub in the accent colour, press-fit on the 3 mm D-shaft. Same tool both sides.",
+   "group": "drivetrain",
+   "color": "#ff6b35",
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "kind": "molded",
+   "material": "PA6 GF (proto: PETG)",
+   "mass_g": 24.1
+  },
+  "part:hub_r": {
+   "title": "Wheel hub",
+   "desc": "Five-spoke hub in the accent colour, press-fit on the 3 mm D-shaft. Same tool both sides.",
+   "group": "drivetrain",
+   "color": "#ff6b35",
+   "explode": [
+    0,
+    -70,
+    0
+   ],
+   "kind": "molded",
+   "material": "PA6 GF (proto: PETG)",
+   "mass_g": 24.1
+  },
+  "part:tyre_l": {
+   "title": "Tyre",
+   "desc": "TPU 85A tyre with a fine chevron tread: grip on wood and tile, quiet on the floor.",
+   "group": "drivetrain",
+   "color": "#22252b",
+   "explode": [
+    0,
+    95,
+    0
+   ],
+   "kind": "molded",
+   "material": "TPU 85A",
+   "mass_g": 19.5
+  },
+  "part:tyre_r": {
+   "title": "Tyre",
+   "desc": "TPU 85A tyre with a fine chevron tread: grip on wood and tile, quiet on the floor.",
+   "group": "drivetrain",
+   "color": "#22252b",
+   "explode": [
+    0,
+    -95,
+    0
+   ],
+   "kind": "molded",
+   "material": "TPU 85A",
+   "mass_g": 19.5
+  },
+  "part:dock": {
+   "title": "Charging dock",
+   "desc": "Low oval puck with a cup the tail drops into and two spring contacts. Teeterkin backs up, leans back, charges. USB-C in.",
+   "group": "dock",
+   "color": "#e6e0d6",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "molded",
+   "material": "ABS (proto: PETG)",
+   "mass_g": 0
+  },
+  "elec:motor_l": {
+   "title": "N20 gearmotor 100:1 + hall encoder",
+   "desc": "Metal-gear N20, 100:1, 3 mm D-shaft, 7-PPR magnetic encoder (700 counts per wheel turn). Run from the 2S pack with a PWM ceiling: about 0.7 m/s top speed on 72 mm wheels.",
+   "group": "drivetrain",
+   "color": "#b9bec6",
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 10.5
+  },
+  "elec:motor_r": {
+   "title": "N20 gearmotor 100:1 + hall encoder",
+   "desc": "Metal-gear N20, 100:1, 3 mm D-shaft, 7-PPR magnetic encoder (700 counts per wheel turn). Run from the 2S pack with a PWM ceiling: about 0.7 m/s top speed on 72 mm wheels.",
+   "group": "drivetrain",
+   "color": "#b9bec6",
+   "explode": [
+    0,
+    -30,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 10.5
+  },
+  "elec:cell_1": {
+   "title": "18650 Li-ion cell 2600 mAh",
+   "desc": "Two cells in series (2S, 7.4 V, 19 Wh). Lying across the body just above the axle: their weight sets the pendulum that the balance loop rides on. About 3 h of active play, 20 h idle (estimate).",
+   "group": "power",
+   "color": "#3b6fb6",
+   "explode": [
+    -10,
+    0,
+    25
+   ],
+   "kind": "modelled",
+   "mass_g": 46.0
+  },
+  "elec:cell_2": {
+   "title": "18650 Li-ion cell 2600 mAh",
+   "desc": "Two cells in series (2S, 7.4 V, 19 Wh). Lying across the body just above the axle: their weight sets the pendulum that the balance loop rides on. About 3 h of active play, 20 h idle (estimate).",
+   "group": "power",
+   "color": "#3b6fb6",
+   "explode": [
+    10,
+    0,
+    25
+   ],
+   "kind": "modelled",
+   "mass_g": 46.0
+  },
+  "elec:pcb": {
+   "title": "Main board",
+   "desc": "One 44 x 70 mm board on the back of the spine: motor driver, IMU, 2S charger + protection, 5 V buck, audio amp, USB-C. The brain lives in the head.",
+   "group": "electronics",
+   "color": "#1f6f3f",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 9.0
+  },
+  "elec:drv8833": {
+   "title": "DRV8833 dual H-bridge",
+   "desc": "Drives both N20s at 25 kHz PWM, 1.2 A per channel; balance loop runs at 500 Hz.",
+   "group": "electronics",
+   "color": "#15181c",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:imu": {
+   "title": "ICM-42670-P 6-axis IMU",
+   "desc": "Gyro + accelerometer for the balance loop. Board sits on the body centreline, 26 mm above the axle.",
+   "group": "electronics",
+   "color": "#15181c",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:charger": {
+   "title": "2S USB-C charger + protection",
+   "desc": "IP2326-class boost charger (5 V USB-C in, 8.4 V out) plus 2S protection with balancing.",
+   "group": "electronics",
+   "color": "#15181c",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:buck": {
+   "title": "5 V 2 A buck regulator",
+   "desc": "Pack to 5 V for the servo, the amp and the head. 3.3 V is made on the XIAO.",
+   "group": "electronics",
+   "color": "#15181c",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:amp": {
+   "title": "MAX98357A I2S amplifier",
+   "desc": "Class-D mono, 3 W, drives the chest speaker for chirps, purrs and speech.",
+   "group": "electronics",
+   "color": "#15181c",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:usbc": {
+   "title": "USB-C port",
+   "desc": "Right-angle receptacle on the back of the board. Charging (when not on the dock) and firmware.",
+   "group": "power",
+   "color": "#c9ccd1",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 1.0
+  },
+  "elec:switch": {
+   "title": "Power switch",
+   "desc": "Slide switch: hard power cut for shipping and storage.",
+   "group": "power",
+   "color": "#30343a",
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 0.5
+  },
+  "elec:pogo_l": {
+   "title": "Charge contacts in the tail",
+   "desc": "Two gold-plated pads flush in the underside of the tail. Parking on the dock = leaning back onto them: no alignment mechanism needed.",
+   "group": "power",
+   "color": "#d4a24a",
+   "explode": [
+    -50,
+    0,
+    -10
+   ],
+   "kind": "modelled",
+   "mass_g": 0.6
+  },
+  "elec:tof": {
+   "title": "VL53L0X time-of-flight sensor",
+   "desc": "Forward laser ranging to 2 m behind the brow window: obstacles, \"someone is in front of me\", following distance.",
+   "group": "sensors",
+   "color": "#6b2f9a",
+   "explode": [
+    50,
+    0,
+    20
+   ],
+   "kind": "modelled",
+   "mass_g": 0.5
+  },
+  "elec:cliff_l": {
+   "title": "Cliff sensor",
+   "desc": "IR reflective sensor (ITR8307 class) looking down and ahead of each wheel: stops at stairs and table edges.",
+   "group": "sensors",
+   "color": "#6b2f9a",
+   "explode": [
+    35,
+    15,
+    -10
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:cliff_r": {
+   "title": "Cliff sensor",
+   "desc": "IR reflective sensor (ITR8307 class) looking down and ahead of each wheel: stops at stairs and table edges.",
+   "group": "sensors",
+   "color": "#6b2f9a",
+   "explode": [
+    35,
+    -15,
+    -10
+   ],
+   "kind": "modelled",
+   "mass_g": 0.3
+  },
+  "elec:servo": {
+   "title": "SG90 micro servo (periscope lift)",
+   "desc": "The only actuator besides the wheels. Through the scotch yoke it pops the head up 38 mm in 0.25 s: peek, duck, nod, bounce.",
+   "group": "motion",
+   "color": "#2b5fa8",
+   "explode": [
+    40,
+    0,
+    30
+   ],
+   "kind": "modelled",
+   "mass_g": 9.0
+  },
+  "elec:horn": {
+   "title": "Servo horn + yoke pin",
+   "desc": "Ships with the servo; an M2 shoulder screw is the crank pin running in the head yoke slot.",
+   "group": "motion",
+   "color": "#f2f2f2",
+   "explode": [
+    25,
+    0,
+    30
+   ],
+   "kind": "modelled",
+   "mass_g": 0.8
+  },
+  "elec:speaker": {
+   "title": "Speaker 28 mm",
+   "desc": "8 ohm 1 W, firing through the chest grille.",
+   "group": "expression",
+   "color": "#3a3d44",
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "mass_g": 5.0
+  },
+  "elec:xiao": {
+   "title": "XIAO ESP32-S3 Sense (brain)",
+   "desc": "Dual-core ESP32-S3, 8 MB PSRAM, Wi-Fi + BLE. Runs the balance loop, behaviours, face animation, wake word and the camera stream; heavier AI is offloaded to the phone app.",
+   "group": "electronics",
+   "color": "#2c2c2c",
+   "explode": [
+    25,
+    0,
+    95
+   ],
+   "kind": "vendor",
+   "mass_g": 5.0
+  },
+  "elec:camera": {
+   "title": "Camera (OV3660 on the XIAO Sense)",
+   "desc": "3 MP camera looking out through the smoked visor below the face. With the head raised it sees over sofa arms and table tops.",
+   "group": "sensors",
+   "color": "#101114",
+   "explode": [
+    45,
+    0,
+    95
+   ],
+   "kind": "modelled",
+   "mass_g": 1.0
+  },
+  "elec:mic": {
+   "title": "PDM microphone (on the XIAO Sense)",
+   "desc": "Wake word (\"hey kin\") and sound events like a doorbell, a dog bark or glass breaking.",
+   "group": "sensors",
+   "color": "#9a9a9a",
+   "explode": [
+    25,
+    0,
+    95
+   ],
+   "kind": "modelled",
+   "mass_g": 0.1
+  },
+  "elec:lcd": {
+   "title": "2.0\" IPS display 320 x 240 (the face)",
+   "desc": "ST7789 SPI panel behind the smoked visor: two big animated eyes and a mouth line. Off = the visor looks black and glossy.",
+   "group": "expression",
+   "color": "#0b0d10",
+   "explode": [
+    35,
+    0,
+    100
+   ],
+   "kind": "modelled",
+   "mass_g": 12.0
+  },
+  "elec:touch": {
+   "title": "Touch pads (ears)",
+   "desc": "Copper pads under the two ear domes, read by the ESP32-S3 touch pins: pat its head, it purrs.",
+   "group": "sensors",
+   "color": "#d4a24a",
+   "explode": [
+    0,
+    0,
+    115
+   ],
+   "kind": "modelled",
+   "mass_g": 0.4
+  },
+  "elec:flex": {
+   "title": "Head cable (10-wire)",
+   "desc": "10-way ribbon down the hollow mast: 5 V, ground, I2C (IMU), I2S (amp), motor PWM, encoder, servo. Service loop below the mast.",
+   "group": "electronics",
+   "color": "#c9a227",
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "kind": "modelled",
+   "mass_g": 1.0
+  }
+ },
+ "labels": [
+  {
+   "key": "part:shell_front",
+   "node": "link:base",
+   "local": [
+    33.0,
+    -30.0,
+    100.0
+   ]
+  },
+  {
+   "key": "part:shell_rear",
+   "node": "link:base",
+   "local": [
+    -34.0,
+    26.0,
+    95.0
+   ]
+  },
+  {
+   "key": "part:core",
+   "node": "link:base",
+   "local": [
+    -22.0,
+    -30.0,
+    140.0
+   ]
+  },
+  {
+   "key": "part:head",
+   "node": "link:head",
+   "local": [
+    -20.0,
+    40.0,
+    47.0
+   ]
+  },
+  {
+   "key": "part:visor",
+   "node": "link:head",
+   "local": [
+    28.0,
+    -40.0,
+    32.0
+   ]
+  },
+  {
+   "key": "part:hub_l",
+   "node": "link:wheel_l",
+   "local": [
+    0.0,
+    8.0,
+    14.0
+   ]
+  },
+  {
+   "key": "part:tyre_l",
+   "node": "link:wheel_l",
+   "local": [
+    25.0,
+    7.0,
+    -24.0
+   ]
+  },
+  {
+   "key": "part:dock",
+   "node": "link:dock",
+   "local": [
+    0.0,
+    -45.0,
+    14.0
+   ]
+  },
+  {
+   "key": "elec:motor_l",
+   "node": "link:base",
+   "local": [
+    0.0,
+    32.5,
+    36.0
+   ]
+  },
+  {
+   "key": "elec:cell_1",
+   "node": "link:base",
+   "local": [
+    -11.5,
+    0.0,
+    62.0
+   ]
+  },
+  {
+   "key": "elec:pcb",
+   "node": "link:base",
+   "local": [
+    -27.7,
+    0.0,
+    71.0
+   ]
+  },
+  {
+   "key": "elec:drv8833",
+   "node": "link:base",
+   "local": [
+    -26.299999999999997,
+    -10.0,
+    52.0
+   ]
+  },
+  {
+   "key": "elec:imu",
+   "node": "link:base",
+   "local": [
+    -26.4,
+    0.0,
+    62.0
+   ]
+  },
+  {
+   "key": "elec:charger",
+   "node": "link:base",
+   "local": [
+    -26.4,
+    10.0,
+    52.0
+   ]
+  },
+  {
+   "key": "elec:buck",
+   "node": "link:base",
+   "local": [
+    -25.599999999999998,
+    10.0,
+    80.0
+   ]
+  },
+  {
+   "key": "elec:amp",
+   "node": "link:base",
+   "local": [
+    -26.4,
+    -10.0,
+    80.0
+   ]
+  },
+  {
+   "key": "elec:usbc",
+   "node": "link:base",
+   "local": [
+    -30.15,
+    0.0,
+    41.0
+   ]
+  },
+  {
+   "key": "elec:switch",
+   "node": "link:base",
+   "local": [
+    -30.0,
+    12.0,
+    50.5
+   ]
+  },
+  {
+   "key": "elec:pogo_l",
+   "node": "link:base",
+   "local": [
+    -40.0,
+    0.0,
+    9.8
+   ]
+  },
+  {
+   "key": "elec:tof",
+   "node": "link:base",
+   "local": [
+    27.4,
+    0.0,
+    126.0
+   ]
+  },
+  {
+   "key": "elec:cliff_l",
+   "node": "link:base",
+   "local": [
+    17.659471966934074,
+    16.779781678622584,
+    18.28124831689774
+   ]
+  },
+  {
+   "key": "elec:servo",
+   "node": "link:base",
+   "local": [
+    15.549999999999999,
+    0.0,
+    102.6
+   ]
+  },
+  {
+   "key": "elec:speaker",
+   "node": "link:base",
+   "local": [
+    28.25,
+    0.0,
+    75.0
+   ]
+  },
+  {
+   "key": "elec:xiao",
+   "node": "link:head",
+   "local": [
+    10.229999999999995,
+    3.552713678800501e-14,
+    13.5
+   ]
+  },
+  {
+   "key": "elec:camera",
+   "node": "link:head",
+   "local": [
+    21.2,
+    0.0,
+    10.5
+   ]
+  },
+  {
+   "key": "elec:lcd",
+   "node": "link:head",
+   "local": [
+    15.95,
+    0.0,
+    33.0
+   ]
+  },
+  {
+   "key": "elec:touch",
+   "node": "link:head",
+   "local": [
+    -6.0,
+    0.0,
+    53.0
+   ]
+  }
+ ]
+}

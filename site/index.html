@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teeterkin: a self-balancing pet robot</title>
+<meta name="description" content="Teeterkin: a two-wheeled self-balancing home pet robot with a pop-up periscope head. Interactive CAD viewer with every component, layers, labels, X-ray and exploded view.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect x=%226%22 y=%224%22 width=%2220%22 height=%2212%22 rx=%225%22 fill=%22%231b2430%22/%3E%3Ccircle cx=%2216%22 cy=%2224%22 r=%227%22 fill=%22%23ff6b35%22/%3E%3C/svg%3E">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="app">
+  <div id="viewer"><div id="labels"></div><div id="loading">Loading model&hellip;</div></div>
+
+  <header class="top">
+    <div class="brand"><span class="orb"></span><b>Teeterkin</b><span class="ver">CAD v0.1</span></div>
+    <p class="tag">A pocket-sized pet that balances on two wheels, pops its head up like a periscope to look around, and keeps an eye on your home.</p>
+  </header>
+
+  <aside class="panel left">
+    <h3>Views</h3>
+    <div class="btns" id="views">
+      <button data-view="34">3/4</button><button data-view="front">Front</button><button data-view="side">Side</button>
+      <button data-view="back">Back</button><button data-view="top">Top</button>
+    </div>
+    <h3>Display</h3>
+    <div class="btns">
+      <button id="xray">X-ray</button><button id="lbls" class="on">Labels</button><button id="peek">Peek</button><button id="demo">Wobble</button>
+    </div>
+    <label class="slider">Explode <input id="explode" type="range" min="0" max="1" step="0.01" value="0"></label>
+    <h3>Layers</h3>
+    <div id="layers"></div>
+    <div class="stats" id="stats"></div>
+  </aside>
+
+  <aside class="panel right">
+    <div class="tabs" id="tabs">
+      <button data-tab="parts" class="on">Parts</button><button data-tab="concept">Concept</button><button data-tab="bom">BOM</button><button data-tab="build">Build</button>
+    </div>
+    <section data-pane="parts"><h3>Components <span id="ncomp"></span></h3><div id="clist"></div></section>
+    <section data-pane="concept" hidden>
+      <h3>The idea</h3>
+      <p>A pet that is <b>alive in motion</b>. Two wheels mean it can never stand still: it sways, leans in when curious, rocks back when startled and settles onto its tail to sleep. One servo lifts its head on a periscope mast, so it can duck, peek over the sofa arm and bounce when you come home.</p>
+      <h3>Why it wins</h3>
+      <ul>
+        <li><b>Character from physics, not parts.</b> Balancing gives constant lifelike micro-motion for free; the only extra actuator is a $1 servo.</li>
+        <li><b>Useful every day.</b> Raised head = camera 26 cm up, enough to see over furniture: home check-ins from your phone, pet cam, "is the stove light on?", follow-me, doorbell and smoke-alarm sound alerts.</li>
+        <li><b>Autonomous.</b> Range + cliff sensors and camera for roaming; finds its dock, backs up and leans onto it to charge, with no alignment mechanism.</li>
+        <li><b>Cheap to make.</b> ~<span class="vtot">$50</span> landed BOM at volume, 8 molding tools, one inner frame, 4 screws to close.</li>
+      </ul>
+      <h3>Hero features</h3>
+      <ul>
+        <li>Pop-up periscope head (38 mm lift, 0.25 s)</li>
+        <li>Big expressive eyes on a 2" screen behind a smoked visor</li>
+        <li>Kickstand tail: zero-power parking and dock contacts</li>
+        <li>Pat-its-head touch ears, wake word, purrs and chirps</li>
+        <li>Phone app: live view, patrol schedule, alerts</li>
+      </ul>
+    </section>
+    <section data-pane="bom" hidden><div id="bom"></div></section>
+    <section data-pane="build" hidden>
+      <h3>Design for manufacture</h3>
+      <ul>
+        <li>All shells split on one flat plane per part: straight-pull tools, no side actions except the USB-C/switch window (one small slide in the rear shell tool).</li>
+        <li>2.2 mm nominal walls, ABS shells, glass-filled PC/ABS core, smoked PC visor, TPU tyres. Draft 1&deg; on all pull faces (to add in the tool design pass).</li>
+        <li>Hubs and tyres are one tool each, used left and right.</li>
+        <li>Prototype: every part prints in PETG on a 220 mm bed (head on its face, shells on their split face), tyres in TPU 85A.</li>
+      </ul>
+      <h3>Assembly (about 12 minutes)</h3>
+      <ol>
+        <li>Press the two N20 motors into the core saddles; clip the cells into the cradle.</li>
+        <li>Screw the main board to the back of the spine (4 x M2); plug motors, cells, speaker, sensors.</li>
+        <li>Drop the servo into its cradle, fit the horn pin, slide the head mast down the sleeve so the pin enters the yoke slot.</li>
+        <li>Fit the display and XIAO into the head, route the ribbon down the mast; snap the visor on.</li>
+        <li>Close the front and rear shells around the core (4 x M2 + snaps); press the hubs onto the shafts, stretch the tyres on.</li>
+        <li>End-of-line test: IMU calibration, balance self-test, head lift, camera, charge on the dock.</li>
+      </ol>
+      <p class="mute">Files: <a href="https://github.com/wjb000/teeterkin/tree/main/cad">CadQuery source, STEP and STL</a> &middot; <a href="https://github.com/wjb000/teeterkin/blob/main/BOM.md">BOM.md</a> &middot; <a href="https://github.com/wjb000/teeterkin/blob/main/cad/DFM.md">DFM.md</a></p>
+    </section>
+  </aside>
+
+  <div id="info" class="info hidden"><b id="info-t"></b><span id="info-k"></span><p id="info-d"></p></div>
+  <footer class="note">Design model for review: not built or tested yet. The XIAO ESP32-S3 uses Seeed's CAD; other bought parts are modelled from datasheet dimensions.
+    <a href="https://github.com/wjb000/teeterkin">Source &amp; CAD on GitHub</a></footer>
+</div>
+<script type="module" src="assets/viewer.js"></script>
+</body>
+</html>
