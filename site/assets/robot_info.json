@@ -4,8 +4,8 @@
   "height_up_mm": 258,
   "width_mm": 132,
   "depth_mm": 73,
-  "total_mass_g": 487,
-  "com_above_axle_mm": 46.6,
+  "total_mass_g": 484,
+  "com_above_axle_mm": 46.9,
   "com_x_mm": -1.6,
   "molded_tools": 8,
   "molded_pieces": 10,
@@ -351,7 +351,7 @@
    ],
    "kind": "molded",
    "material": "PA6 GF (proto: PETG)",
-   "mass_g": 24.1
+   "mass_g": 22.8
   },
   "part:hub_r": {
    "title": "Wheel hub",
@@ -365,7 +365,7 @@
    ],
    "kind": "molded",
    "material": "PA6 GF (proto: PETG)",
-   "mass_g": 24.1
+   "mass_g": 22.8
   },
   "part:tyre_l": {
    "title": "Tyre",
@@ -582,7 +582,7 @@
    "title": "VL53L0X time-of-flight sensor",
    "desc": "Forward laser ranging to 2 m behind the brow window: obstacles, \"someone is in front of me\", following distance.",
    "group": "sensors",
-   "color": "#6b2f9a",
+   "color": "#23262c",
    "explode": [
     50,
     0,
