@@ -1,0 +1,5 @@
+__pycache__/
+cad/vendor/
+cad/step/teeterkin_assembly.step
+cad/step/hub_*.step
+cad/step/tyre_*.step
